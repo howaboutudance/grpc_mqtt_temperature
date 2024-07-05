@@ -1,7 +1,6 @@
 .venv
-.pytest_cache
 __cache__
 __pycache__
+
+# ignore dynaconf secret files
 config/.secrets.yaml
-# Ignore dynaconf secret files
-.secrets.*
