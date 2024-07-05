@@ -10,6 +10,7 @@ from grpc_temp.config import settings
 
 _log = logging.getLogger(__name__)
 
+
 class Temperature(temperature_grpc.TemperatureServiceServicer):
     def GetTemperature(self, request, context):
         _log.info(f"Received request for device {request.device_id}")
@@ -19,6 +20,7 @@ class Temperature(temperature_grpc.TemperatureServiceServicer):
         temperature.timestamp = "2021-09-01T12:00:00Z"
         return temperature_core.GetTemperatureResponse(temperature=temperature)
 
+
 def start_server():
     server = grpc.server(ThreadPoolExecutor())
     temperature_grpc.add_TemperatureServiceServicer_to_server(Temperature(), server)
@@ -26,6 +28,7 @@ def start_server():
     server.start()
     _log.info("Server started")
     server.wait_for_termination()
+
 
 if __name__ == "__main__":
     logging.basicConfig(level=logging.DEBUG)

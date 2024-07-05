@@ -3,5 +3,5 @@
 import dynaconf
 
 settings = dynaconf.Dynaconf(
-    settings_files=['settings.yaml', '.secrets.yaml'],
+    settings_files=["settings.yaml", ".secrets.yaml"],
 )

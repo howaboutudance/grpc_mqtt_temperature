@@ -17,3 +17,4 @@ testpaths = ["test"]
 
 [tool.ruff]
 line-length = 120
+exclude = ["src/grpc_temp/protos/*"]

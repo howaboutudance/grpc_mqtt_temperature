@@ -6,11 +6,11 @@ from grpc_temp import cli
 from grpc_temp.server import start_server
 
 
-logging.basicConfig(level=settings.log_level.upper()) 
+logging.basicConfig(level=settings.log_level.upper())
 _log = logging.getLogger(__name__)
 
 # assume running cli inferface and parse args
-if settings.interface == "cli" or settings.interface == None:
+if settings.interface == "cli" or settings.interface is None:
     _log.info("Running CLI interface")
     # parse args
     arguments = cli.parse_args()
