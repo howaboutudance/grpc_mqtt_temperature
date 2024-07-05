@@ -1,0 +1,19 @@
+[build-system]
+requires = ["wheel"]
+build-backend = "setuptools.build_meta"
+
+[metadata]
+name = "grpc_temp"
+version = "0.1.0"
+authors = [
+    {name = "Michael Penhallegon", email = "mike@hematite.tech"}
+]
+
+[options.packages.find]
+where = "src"
+
+[tools.pytest]
+testpaths = ["test"]
+
+[tool.ruff]
+line-length = 120

@@ -1,0 +1,14 @@
+# Packaging + Distribution
+wheel
+
+# Base Dependencies
+dynaconf
+
+# Testing
+ipython
+ipdb
+pytest
+pytest-cov
+
+# Linting + Formatting
+ruff
