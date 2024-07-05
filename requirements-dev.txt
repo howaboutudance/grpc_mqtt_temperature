@@ -3,6 +3,10 @@ wheel
 
 # Base Dependencies
 dynaconf
+grpcio
+grpcio-tools
+grpcio-reflection
+
 
 # Testing
 ipython
