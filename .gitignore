@@ -4,3 +4,19 @@ __pycache__
 
 # ignore dynaconf secret files
 config/.secrets.yaml
+
+# exclude cache files
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache
+.ruff_cache
+.ruff_cache.json
+
+# exclude log files
+*.log
+
+# exclude build folders
+build/
+dist/
+*.egg-info/
