@@ -2,10 +2,16 @@
 wheel
 
 # Base Dependencies
+# Environment Configuration
 dynaconf
+
+# gRPC libraries
 grpcio
 grpcio-tools
 grpcio-reflection
+
+# MQTT libraries
+paho-mqtt
 
 
 # Testing

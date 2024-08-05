@@ -8,6 +8,16 @@ version = "0.1.0"
 authors = [
     {name = "Michael Penhallegon", email = "mike@hematite.tech"}
 ]
+requires-python = ">=3.11"
+
+[options.extras_require]
+dev = [
+    "ruff",
+    "pytest",
+    "pytest-cov",
+    "ipython",
+    "ipdb"
+]
 
 [options.packages.find]
 where = "src"
