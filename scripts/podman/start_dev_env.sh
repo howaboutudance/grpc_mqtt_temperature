@@ -21,8 +21,6 @@ fi
 podman pod create \
     --name $PODMAN_POD_NAME \
     --network $PODMAN_NETWORK_NAME \
-    -p 1883:1883 \
-    -p 9001:9001
 
 # Start the containers
 podman run -d --name $PODMAN_CONTAINER_NAME \
@@ -30,8 +28,9 @@ podman run -d --name $PODMAN_CONTAINER_NAME \
     --network $PODMAN_NETWORK_NAME \
     -p 1883:1883 \
     -p 9001:9001 \
-    -v ./scripts/podman/mosquitto/data:/mosquitto/data \
-    -v ./scripts/podman/mosquitto/log:/mosquitto/log \
+    -v ./scripts/podman/mosquitto/data:/mosquitto/data:Z \
+    -v ./scripts/podman/mosquitto/log:/mosquitto/log:Z \
+    -v ./scripts/podman/mosquitto/config:/mosquitto/config/:Z \
     eclipse-mosquitto
 
 # wait for the container to start
